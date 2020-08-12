@@ -1,24 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <span class="text-center"><a href="#" target="_blank" tabindex="0">We are Open for Business and Shipping on
+          Time</a></span>
+    </div>
+  </div>
+</div>
 <div class="navbar navbar-fixed-top">
   <div class="header">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
-          <span class="text-center"><a href="#" target="_blank" tabindex="0">We are Open for Business and Shipping on Time</a></span>
-        </div>
-      </div>
-    </div>
-    
+
+
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
           <ul class="nav-list">
             <!-- Toggle the menu on mobile -->
             <li class="list-item-nav-toggle">
-              <button
-                type="button"
-                class="navbar-toggle"
-                @click="toggleMobileMenu()"
-              >
+              <button type="button" class="navbar-toggle" @click="toggleMobileMenu()">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -33,10 +31,7 @@
             </li>
             <!-- End -->
             <li data-test="stores-link" class="list-item-store">
-              <router-link
-                :to="{ name: 'stores' }"
-                class="store-select icon-marker"
-              >
+              <router-link :to="{ name: 'stores' }" class="store-select icon-marker">
                 <span class="hidden-xs">{{storeName}} </span>
               </router-link>
             </li>
@@ -60,29 +55,13 @@
     <div class="row logo-search">
       <div class="col-sm-8">
         <router-link to="/" class="brand-logo">
-          <img
-            src="../../../assets/img/logo.svg"
-            alt="SUNRISE"
-            class="img-responsive"
-          />
+          <img src="../../../assets/img/logo.svg" alt="SUNRISE" class="img-responsive" />
         </router-link>
       </div>
       <div class="col-sm-4">
-        <form
-          id="form-search"
-          action="#"
-          class="search-box text-right"
-          v-on:submit.prevent="search"
-        >
-          <input
-            name="q"
-            type="search"
-            :placeholder="$t('search')"
-            id="search-input"
-            class="search-field"
-            v-model="searchText"
-            required
-          />
+        <form id="form-search" action="#" class="search-box text-right" v-on:submit.prevent="search">
+          <input name="q" type="search" :placeholder="$t('search')" id="search-input" class="search-field"
+            v-model="searchText" required />
           <button type="submit" id="search-button" class="search-button">
             <span class="icon-font icon-magnifying-glass"></span>
             <span class="sr-only">{{ $t('search') }}</span>
@@ -91,10 +70,7 @@
       </div>
     </div>
     <div class="row">
-      <CategoriesMenu
-        v-bind:openMobile="mobileMenuOpen"
-        v-on:closeMobile="mobileMenuOpen = false"
-      />
+      <CategoriesMenu v-bind:openMobile="mobileMenuOpen" v-on:closeMobile="mobileMenuOpen = false" />
       <!--{{#if header.location}}-->
       <!--<li class="visible-xs location-xs">-->
       <!--{{> common/location-selector-mobile location=header.location}}-->
